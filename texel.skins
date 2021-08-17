@@ -1,0 +1,8 @@
+{
+    "Texel": {
+        "Preferences": {
+            "theme": "Texel.sublime-theme",
+            "color_scheme": "Packages/Theme - Texel/Texel.tmTheme"
+        }
+    }
+}
