@@ -1,12 +1,12 @@
 # Texel
 
-### Minimalistic theme based on Dracula
+## Minimalistic theme based on Dracula
 
 ![Иллюстрация к проекту](https://github.com/nkr413/texel-theme/blob/main/readme-docs/texel-pic.png)
 
 
-### Download files
-
+### Installation
+- Download files
 - Move all files to the `Theme - Texel` folder
 
 - Open Sublime Text and find the Packages directory using the `Preferences` -> `Browse Packages` ... menu item.
