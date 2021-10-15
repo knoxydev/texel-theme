@@ -7,8 +7,8 @@
 
 ### Download files
 
-Move all files to the *Theme - Texel* folder
+Move all files to the `Theme - Texel` folder
 
-Open Sublime Text and find the Packages directory using the *Preferences* -> *Browse Packages* ... menu item.
-Move the *Texel Theme* color scheme folder you created to the *Sublime Text Packages directory*.
-Go to *Settings* -> *Choose Color Scheme* and select *Theme - Texel*.
+Open Sublime Text and find the Packages directory using the `Preferences` -> `Browse Packages` ... menu item.
+Move the `Texel Theme` color scheme folder you created to the `Sublime Text Packages directory`.
+Go to `Settings` -> `Choose Color Scheme` and select `Theme - Texel`.
