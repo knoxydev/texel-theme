@@ -1,39 +1,32 @@
 {
   "extends": "Default.sublime-theme",
-  "variables":
-  {
+  "variables": {
     "base_hue": "hsl(215, 10%, 50%)",
     "base_tint": "white",
-
     "ui_bg": "color(var(base_hue) l(20%))",
     "text_fg": "hsl(0, 0%, 85%)",
-
     "button_bg": "color(var(base_hue) l(30%))",
-
     "button_label_shadow": "transparent",
-
     "sidebar_bg": "color(var(base_hue) l(15%))",
     "sidebar_row_selected": "color(var(base_hue) l(25%))",
-
+    "accent": "#FFFFFF",
+    "tabInactiveBackground": "#080A16",
+    "tabActiveForeground": "#FFFFFF",
+    "tabActiveBackground": "#21232F",
+    "tabButtonForeground": "#c9d1d9",
+    "fontFace": "system",
     "sidebar_heading": "hsl(0, 0%, 90%)",
     "sidebar_heading_shadow": "transparent",
     "sidebar_label": "hsl(0, 0%, 80%)",
     "sidebar_label_selected": "hsl(0, 0%, 90%)",
     "sidebar_label_ignored": "hsl(0, 0%, 50%)",
-
     "sidebar_scroll_bar_bg": "var(scroll_bar_dark_bg)",
     "sidebar_scroll_bar_puck_bg": "var(scroll_bar_puck_dark_bg)",
-
     "panel_bg": "var(ui_bg)",
-
     "progress_bar_fg": "color(var(base_hue) l(40%))",
-
     "dialog_button_bg": "color(var(base_hue) l(70%))",
-
     "icon_button_highlight": "color(var(base_hue) l(30%))",
-
     "tool_tip_fg": "hsl(0, 0%, 25%)",
-
     "tabset_dark_tint_mod": "color(white a(0.20))",
     "tabset_dark_bg": "color(var(--background) blend(white 80%))",
     "tabset_medium_dark_tint_mod": "color(white a(0.15))",
@@ -42,69 +35,55 @@
     "tabset_medium_bg": "color(var(--background) blend(black 75%))",
     "tabset_light_tint_mod": "color(black a(0.20))",
     "tabset_light_bg": "color(var(--background) blend(black 80%))",
-
     "overlay_bg": "var(ui_bg)",
-
     "quick_panel_label_color": "color(var(base_hue) l(75%))",
     "quick_panel_path_label_color": "color(var(base_hue) l(65%))",
     "quick_panel_matched_label_color": "color(var(base_hue) l(90%))",
     "quick_panel_matched_path_label_color": "color(var(base_hue) l(80%))",
-
     "quick_panel_selected_row_bg": "color(var(base_hue) l(30%))",
     "quick_panel_selected_label_color": "color(var(base_hue) l(80%))",
     "quick_panel_selected_path_label_color": "color(var(base_hue) l(70%))",
     "quick_panel_selected_matched_label_color": "var(quick_panel_matched_label_color)",
     "quick_panel_selected_matched_path_label_color": "color(var(base_hue) l(80%))",
-
     "status_bar_bg": "var(ui_bg)",
     "status_bar_label_shadow": "transparent",
-
-    // The angled styles aren't great, but preserved since it is easier
-    // to tweak them a little than prevent the "angled" style rules from
-    // applying
     "file_tab_angled_unselected_dark_tint": "color(white a(0.07))",
     "file_tab_angled_unselected_medium_dark_tint": "color(white a(0.07))",
     "file_tab_angled_unselected_medium_tint": "color(black a(0.13))",
     "file_tab_angled_unselected_light_tint": "color(black a(0.12))",
-
     "file_tab_angled_unselected_label_color": "hsl(0, 0%, 60%)",
     "file_tab_angled_unselected_label_shadow": "transparent",
     "file_tab_angled_unselected_medium_label_color": "hsl(0, 0%, 75%)",
     "file_tab_angled_unselected_medium_label_shadow": "transparent",
     "file_tab_angled_unselected_light_label_color": "hsl(0, 0%, 45%)",
-    "file_tab_angled_unselected_light_label_shadow": "transparent",
+    "file_tab_angled_unselected_light_label_shadow": "transparent"
   },
-  "rules":
-  [
-    // ScrollBar
+  "rules": [
     {
       "class": "puck_control",
-      "content_margin": [1, 1],
-      "layer0.tint": [100, 108, 170]
+      "content_margin": [0.5,0.5],
+      "layer0.tint": [100,108,170]
     },
-    // Status Bar
     {
       "class": "status_bar",
-      "content_margin": [4, 2, 4, 2],
-      "layer0.tint": [30,30,40],
-      "layer0.opacity": 1.0
+      "content_margin": [4,2,4,2],
+      "layer0.tint": [8,10,22],
+      "layer0.opacity": 1
     },
     {
       "class": "label_control",
       "parents": [{"class": "status_bar"}],
-      "fg": [230,230,230],
+      "fg": [180,180,180],
       "font.size": 12,
-      "font.face": "Droid Sans Mono"
+      "font.face": "Cascadia Mono"
     },
-    // TitleBar
     {
       "class": "title_bar",
       "style": "dark",
       "bg": [8,10,22],
       "fg": [140,140,140],
-      "show_full_path": true,
+      "show_full_path": true
     },
-    // Sidebar container
     {
       "class": "sidebar_container",
       "layer0.texture": "",
@@ -113,16 +92,14 @@
       "layer0.inner_margin": [1,5,2,1],
       "content_margin": [6,0,0,0]
     },
-    // Sidebar tree
     {
       "class": "sidebar_tree",
       "row_padding": [4,4],
-      "indent":18,
+      "indent": 18,
       "indent_offset": 16,
       "indent_top_level": false,
       "dark_content": true
     },
-    // Sidebar rows
     {
       "class": "tree_row",
       "layer0.texture": "",
@@ -130,24 +107,20 @@
       "layer0.opacity": 0,
       "layer0.inner_margin": [0,0]
     },
-    // Sidebar row selected
     {
       "class": "tree_row",
       "attributes": ["selected"],
       "layer0.opacity": 0
     },
-    // Sidebar heading
     {
       "class": "sidebar_heading",
-      "color": [66,68,80],
+      "color": [66,68,80]
     },
-    // Sidebar entry
     {
       "class": "sidebar_label",
       "color": [140,140,140],
-      "shadow_color": [0,0,0],
+      "shadow_color": [0,0,0]
     },
-    // Sidebar folder entry 
     {
       "class": "sidebar_label",
       "parents": [{"class": "tree_row","attributes": ["hover"]}],
@@ -156,13 +129,12 @@
     {
       "class": "sidebar_label",
       "parents": [{"class": "tree_row","attributes": ["selected"]}],
-      "color": [255,255,255],
+      "color": [255,255,255]
     },
     {
       "class": "icon_folder",
       "content_margin": [0,0]
     },
-    // Sidebar group closed
     {
       "class": "disclosure_button_control",
       "content_margin": [9,9],
@@ -174,13 +146,17 @@
     {
       "class": "disclosure_button_control",
       "parents": [{"class": "tree_row","attributes": ["hover"]}],
-      "layer0.tint":[255,255,255]
+      "layer0.tint": [255,255,255]
     },
     {
       "class": "disclosure_button_control",
-      "parents": [{"class": "tree_row","attributes": ["selected"]}]
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": ["selected"]
+        }
+      ]
     },
-    // Sidebar folder closed
     {
       "class": "disclosure_button_control",
       "settings": ["soda_folder_icons"]
@@ -188,17 +164,26 @@
     {
       "class": "disclosure_button_control",
       "settings": ["soda_folder_icons"],
-      "parents": [{"class": "tree_row","attributes": ["hover"]}]
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": ["hover"]
+        }
+      ]
     },
     {
       "class": "disclosure_button_control",
       "settings": ["soda_folder_icons"],
-      "parents": [{"class": "tree_row","attributes": ["selected"]}],
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": ["selected"]
+        }
+      ],
       "layer0.texture": "Theme - Texel/Texel/folder-closed@2x.png",
       "layer0.tint": [170,170,170],
       "layer0.opacity": 1
     },
-    // Sidebar group open
     {
       "class": "disclosure_button_control",
       "attributes": ["expanded"],
@@ -207,35 +192,101 @@
     {
       "class": "disclosure_button_control",
       "attributes": ["expanded"],
-      "parents": [{"class": "tree_row","attributes": ["hover"]}],
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": ["hover"]
+        }
+      ],
       "layer0.texture": "Theme - Texel/Texel/folder-open@2x.png"
     },
     {
       "class": "disclosure_button_control",
       "attributes": ["expanded"],
-      "parents": [{"class": "tree_row","attributes": ["selected"]}],
-      "layer0.texture": "Theme - Texel/Texel/folder-open@2x.png"
-    },
-    // Sidebar folder open
-    {
-      "class": "disclosure_button_control",
-      "settings": ["soda_folder_icons"],
-      "attributes": ["expanded"],
-      "layer0.texture": "Theme - Texel/Texel/folder-open@2x.png"
-    },
-    {
-      "class": "disclosure_button_control",
-      "settings": ["soda_folder_icons"],
-      "attributes": ["expanded"],
-      "parents": [{"class": "tree_row","attributes": ["hover"]}],
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": ["selected"]
+        }
+      ],
       "layer0.texture": "Theme - Texel/Texel/folder-open@2x.png"
     },
     {
       "class": "disclosure_button_control",
       "settings": ["soda_folder_icons"],
       "attributes": ["expanded"],
-      "parents": [{"class": "tree_row","attributes": ["selected"]}],
       "layer0.texture": "Theme - Texel/Texel/folder-open@2x.png"
+    },
+    {
+      "class": "disclosure_button_control",
+      "settings": ["soda_folder_icons"],
+      "attributes": ["expanded"],
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": ["hover"]
+        }
+      ],
+      "layer0.texture": "Theme - Texel/Texel/folder-open@2x.png"
+    },
+    {
+      "class": "disclosure_button_control",
+      "settings": ["soda_folder_icons"],
+      "attributes": ["expanded"],
+      "parents": [
+        {
+          "class": "tree_row",
+          "attributes": ["selected"]
+        }
+      ],
+      "layer0.texture": "Theme - Texel/Texel/folder-open@2x.png"
+    },
+
+    // TABS
+    {
+      "class": "scroll_tabs_left_button",
+      "content_margin": [0,0]
+    },
+    {
+      "class": "scroll_tabs_right_button",
+      "layer0.tint": "var(tabButtonForeground)",
+      "content_margin": [0,0]
+    },
+    {
+      "class": "show_tabs_dropdown_button",
+      "content_margin": [0,0]
+    },
+    {
+      "class": "tabset_control",
+      "layer0.tint": "var(tabInactiveBackground)",
+      "layer0.opacity": 1,
+      "content_margin": [0,0,5,0],
+      "connector_height": 0,
+      "tint_index": 0,
+      "tab_overlap": 0,
+      "tab_width": 80,
+      "tab_height": 35,
+      "mouse_wheel_switch": false,
+      "tint_modifier": "var(tabInactiveBackground)"
+    },
+    {
+      "class": "tab_control",
+      "layer1.texture": "",
+      "layer1.tint": "var(tabInactiveBackground)",
+      "layer1.opacity": 1,
+      "layer3.opacity": 0,
+      "tint_modifier": "var(tabInactiveBackground)"
+    },
+    {
+      "class": "tab_control",
+      "attributes": ["selected"],
+      "tint_modifier": "var(tabActiveBackground)"
+    },
+    {
+      "class": "tab_label",
+      "font.face": "var(fontFace)",
+      "font.size": 12,
+      "fg": "var(tabActiveForeground)"
     },
   ]
 }
