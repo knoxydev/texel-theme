@@ -2,7 +2,7 @@
 
 ## Minimalistic theme based on Dracula
 
-![Иллюстрация к проекту](https://github.com/nkr413/texel-theme/blob/main/readme-docs/texel-pic.png)
+![Иллюстрация к проекту](https://github.com/knoxydev/texel-theme/blob/main/readme-docs/texel-pic.png)
 
 
 ### Installation
